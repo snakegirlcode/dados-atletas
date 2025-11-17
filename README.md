@@ -104,6 +104,47 @@ dados-atletas/
 
 ---
 
+## 📎 Como usar em outro arquivo
+
+Se você quiser importar a classe **Atleta** em outro arquivo JavaScript, use o modelo abaixo:
+
+### **Usando ES Modules (Node.js moderno ou Vite):**
+
+```javascript
+import Atleta from "./dados-atletas.js";
+
+const atleta = new Atleta(
+  "Maria",
+  20,
+  60,
+  1.65,
+  [8, 9, 10, 9]
+);
+
+console.log(atleta.obtemIMC());
+console.log(atleta.obtemCategoria());
+```
+
+### **Usando Browser (script type=module):**
+
+```html
+<script type="module">
+  import Atleta from './dados-atletas.js';
+
+  const atleta = new Atleta(
+    "João",
+    18,
+    70,
+    1.80,
+    [9, 8.5, 10, 7.5]
+  );
+
+  console.log(atleta.obtemMediaValida());
+</script>
+```
+
+---
+
 ## ▶️ **Como executar o projeto**
 
 1. Clone o repositório:
@@ -120,7 +161,3 @@ git clone https://github.com/seuusuario/dados-atletas
 ## ✨ Autora
 
 Projeto desenvolvido por **Thaís de Sousa Campos**.
-
----
-
-Se quiser, posso adicionar **screenshots reais**, **GIF animado**, **seções extras**, ou deixar o visual mais profissional! 🚀
